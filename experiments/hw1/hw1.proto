@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package grpc.experiments;
+
+service Greeter {
+  rpc SayHi (HiRequest) returns (HiResponse) {}
+}
+
+message HiRequest {
+  string name = 1;
+  string hi_message = 2;
+}
+
+message HiResponse {
+  string hi_reply = 1;
+}
