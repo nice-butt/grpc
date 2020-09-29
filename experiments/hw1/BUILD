@@ -29,3 +29,13 @@ cc_binary(
         "//:grpc++",
     ],
 )
+
+cc_binary(
+    name = "hw1_server",
+    srcs = ["hw1_server_main.cc"],
+    deps = [
+        ":hw1_cc_grpc",
+        "//:grpc++",
+        "//:grpc++_reflection",
+    ],
+)
